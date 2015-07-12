@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/ameshandjess.css" />
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
 
 	<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
 	<script type="text/javascript">
@@ -48,6 +49,13 @@
 			    }
 			});
 
+	    	$('.grid').masonry({
+			  	// options
+			  	itemSelector: '.grid-item',
+			  	gutter: 10,
+			  	columnWidth: '.grid-sizer',
+			  	percentPosition: true
+			});
 
 //TODO add some stuff for switching stuff.
 
@@ -75,8 +83,8 @@
 	    </div>
 	    <div class="section" id="section2">
 	    	<div class="venue">
-	    		<div class="grid">
-		    		<div class="grid-unit"> 
+	    		<div class="venue-grid">
+		    		<div class="venue-grid-unit"> 
 		    			<h2>March 26, 2016</h2>
 		    			<p>Ceremony at 3:00pm, Reception to follow</p>
 		    			<h2>Birds Eye Cove</h2>
@@ -118,47 +126,58 @@
 				</ul>
 	    	</div>
 	    	<div class="acc-details">
-	    		<div id="acc-duncan">
-	    			<div class="acc-item">
+	    		<div id="acc-duncan" class="grid">
+	    			<div class="grid-sizer"></div>
+	    			<div class="acc-item grid-item">
+	    				<a href="http://www.thunderbirdmotorinn.ca/">
 	    				Thunderbird Motor Inn
 						250-748-8192 
-						http://www.thunderbirdmotorinn.ca/
+						</a>
 					</div>
-					<div class="acc-item">
+					<div class="acc-item grid-item">
+						<a href="http://www.cowichanvalleyinn.com/">
 						Best Western Cowichan Valley Inn
 						250-748-2722
-						http://www.cowichanvalleyinn.com/
+						</a>
 					</div>
-					<div class="acc-item">
+					<div class="acc-item grid-item">
+						<a href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview">
 						Super 8 
 						250-748-0661
-						http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview
+						</a>
 					</div>
-					<div class="acc-item">
+					<div class="acc-item grid-item">
+						<a href"http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview?hotel_id=12614&cid=whg_tlcan_ggl_br&wid=ps:br_whg&iata=00065402&002=2210345&004=5800763481&005=104339768&006=47467203081&007=Search&008=&025=c&026=">
 						Travelodge Silver Bridge
 						Phone: 1-250-748-4311
 						Reservation: 1-888-858-2200
-						http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview?hotel_id=12614&cid=whg_tlcan_ggl_br&wid=ps:br_whg&iata=00065402&002=2210345&004=5800763481&005=104339768&006=47467203081&007=Search&008=&025=c&026=
+						</a>
 					</div>
 	    		</div>
-	    		<div id="acc-cowichan">
-	    			<div class="acc-item">
+	    		<div id="acc-cowichan" class="grid">
+	    			<div class="grid-sizer"></div>
+	    			<div class="acc-item grid-item">
+	    				<a href"http://www.wessexinn.com/index.php">
 						Wessex Inn
-						http://www.wessexinn.com/index.php
+						</a>
 					</div>
-					<div class="acc-item">
+					<div class="acc-item grid-item">
+						<a href"http://www.bbcanada.com/visecretgarden">
 						The Secret Garden B&B (closest to the veue)
-						http://www.bbcanada.com/visecretgarden
+						</a>
 					</div>
-					<div class="acc-item">
+					<div class="acc-item grid-item">
 						The funky Frog B&B
 						250-597-4662
 					</div>
 	    		</div>
-	    		<div id="acc-airbnb">
-	    			<p>
-	    				Check out AirBnB listings here.
-	    			</p>
+	    		<div id="acc-airbnb" class="grid">
+	    			<div class="grid-sizer"></div>
+	    			<div class="acc-item grid-item">
+		    			<p>
+		    				Check out AirBnB listings here.
+		    			</p>
+	    			</div>
 	    		</div>
 	    	</div>
 	    </div>
