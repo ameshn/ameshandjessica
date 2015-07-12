@@ -57,10 +57,41 @@
 			  	percentPosition: true
 			});
 
-//TODO add some stuff for switching stuff.
-
+	    	// RSVP init
 			$('#RSVPifyIFrame').css('height', $(window).height()+'px');
 			$('.iframe-container').css('height', $(window).height()+'px');
+
+	    	// Init Accomodation list.
+			hideAllAcc();
+			$("#acc-duncan").show();
+
+			$("#acc-button-duncan").click({group: $("#acc-duncan")}, showAcc);
+
+			$("#acc-button-cowichan").click({group: $("#acc-cowichan")}, showAcc);
+
+			$("#acc-button-airbnb").click({group: $("#acc-airbnb")}, showAcc);
+
+			
+			// Helper functions
+			
+			function hideAllAcc()
+			{
+				$("#acc-duncan").hide();
+			    $("#acc-cowichan").hide();
+			    $("#acc-airbnb").hide();
+			}
+
+			function showAcc(e)
+			{
+				$( "#acc-menu" ).find( "li" ).removeClass("active");
+				$(this).addClass("active");
+
+				e.preventDefault();
+
+				hideAllAcc();
+
+			    $(e.data.group).fadeIn();
+			}
 	    });
     </script>
 
@@ -120,9 +151,9 @@
 	    	</div>
 	    	<div class="acc-types">
 	    		<ul id="acc-menu">
-					<li data-menuanchor="acc-duncan" class="active"><a href="#acc-duncan">Duncan</a></li>
-					<li data-menuanchor="acc-cowichan"><a href="#acc-cowichan">Cowichan Bay</a></li>
-					<li data-menuanchor="acc-airbnb"><a href="#acc-airbnb">AirBnB</a></li>
+					<li id="acc-button-duncan" class="active"><a href="#">Duncan</a></li>
+					<li id="acc-button-cowichan"><a href="#">Cowichan Bay</a></li>
+					<li id="acc-button-airbnb"><a href="#">AirBnB</a></li>
 				</ul>
 	    	</div>
 	    	<div class="acc-details">

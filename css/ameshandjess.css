@@ -120,6 +120,39 @@ div.venue-grid-unit {
             border-radius: 10px;
 }
 
+#acc-menu li {
+    display:inline-block;
+    margin: 10px;
+    color: #000;
+    background:#fff;
+    background: rgba(255,255,255, 0.5);
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+
+#acc-menu li.active{
+    background:#666;
+    background: rgba(0,0,0, 0.5);
+    color: #fff;
+}
+#acc-menu li a{
+    text-decoration:none;
+    color: #000;
+}
+#acc-menu li.active a:hover{
+    color: #000;
+}
+#acc-menu li:hover{
+    background: rgba(255,255,255, 0.8);
+}
+#acc-menu li a,
+#acc-menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+#acc-menu li.active a{
+    color: #fff;
+}
 /* Menu
  * --------------------------------------- */
 #menu li {
