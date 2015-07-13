@@ -10,6 +10,7 @@
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=IM+Fell+English" />
+	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
 	<link rel="stylesheet" type="text/css" href="css/ameshandjess.css" />
 
@@ -32,7 +33,7 @@
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
 	    		anchors: ['home', 'venue', 'rsvp', 'party', 'accomodation', 'gifts'],
-			    sectionsColor: ['white', '#931640', 'white', 'white', '#931640', '#B29600'],
+			    sectionsColor: ['white', '#931640', 'white', 'white', '#931640', '#926916'],
 			    navigation: {
 			    	'position': 'right',
 			   		'tooltips': ['Home', 'Venue', 'RSVP', 'Wedding Party', 'Accomodations', 'Gift Registry']
@@ -52,9 +53,7 @@
 	    	$('.grid').masonry({
 			  	// options
 			  	itemSelector: '.grid-item',
-			  	gutter: 10,
-			  	columnWidth: '.grid-sizer',
-			  	percentPosition: true
+			  	isFitWidth: true
 			});
 
 	    	// RSVP init
@@ -73,7 +72,7 @@
 
 			
 			// Helper functions
-			
+
 			function hideAllAcc()
 			{
 				$("#acc-duncan").hide();
@@ -158,56 +157,64 @@
 	    	</div>
 	    	<div class="acc-details">
 	    		<div id="acc-duncan" class="grid">
-	    			<div class="grid-sizer"></div>
 	    			<div class="acc-item grid-item">
-	    				<a href="http://www.thunderbirdmotorinn.ca/">
-	    				Thunderbird Motor Inn
-						250-748-8192 
+	    				<h2> Thunderbird Motor Inn</h2>
+						<p>1-250-748-8192 </p>
+	    				<a class="btn" href="http://www.thunderbirdmotorinn.ca" target="_blank">
+	    				Book Now
 						</a>
 					</div>
 					<div class="acc-item grid-item">
-						<a href="http://www.cowichanvalleyinn.com/">
-						Best Western Cowichan Valley Inn
-						250-748-2722
+						<h2>Best Western Cowichan Valley Inn</h2>
+						<p>1-250-748-2722</p>
+	    				<a class="btn" href="http://www.cowichanvalleyinn.com" target="_blank">
+	    				Book Now
 						</a>
 					</div>
 					<div class="acc-item grid-item">
-						<a href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview">
-						Super 8 
-						250-748-0661
+						<h2>Super 8</h2>
+						<p>1-250-748-0661</p>
+	    				<a class="btn" href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview" target="_blank">
+	    				Book Now
 						</a>
 					</div>
 					<div class="acc-item grid-item">
-						<a href"http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview?hotel_id=12614&cid=whg_tlcan_ggl_br&wid=ps:br_whg&iata=00065402&002=2210345&004=5800763481&005=104339768&006=47467203081&007=Search&008=&025=c&026=">
-						Travelodge Silver Bridge
-						Phone: 1-250-748-4311
-						Reservation: 1-888-858-2200
+						<h2>Travelodge Silver Bridge</h2>
+						<p>1-888-858-2200</p>
+	    				<a class="btn" href="http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview" target="_blank">
+	    				Book Now
 						</a>
 					</div>
 	    		</div>
 	    		<div id="acc-cowichan" class="grid">
-	    			<div class="grid-sizer"></div>
 	    			<div class="acc-item grid-item">
-	    				<a href"http://www.wessexinn.com/index.php">
-						Wessex Inn
+	    				<h2>Wessex Inn</h2>
+						<p>1-250-748-4214</p>
+	    				<a class="btn" href="http://www.wessexinn.com/index.php" target="_blank">
+	    				Book Now
 						</a>
 					</div>
 					<div class="acc-item grid-item">
-						<a href"http://www.bbcanada.com/visecretgarden">
-						The Secret Garden B&B (closest to the veue)
+						<h2>The Secret Garden B&B (closest to the veue)</h2>
+						<p>1-250-412-1603</p>
+	    				<a class="btn" href="http://www.bbcanada.com/visecretgarden" target="_blank">
+	    				Book Now
 						</a>
 					</div>
-					<div class="acc-item grid-item">
-						The funky Frog B&B
-						250-597-4662
+					<div class="acc-item grid-item grid-item-3">
+						<h2>The Funky Frog B&B</h2>
+						<p>1-250-597-4662</p>
+	    				<a class="btn" href="http://www.funkyfrogbb.com/" target="_blank">
+	    				Book Now
+						</a>
 					</div>
 	    		</div>
 	    		<div id="acc-airbnb" class="grid">
-	    			<div class="grid-sizer"></div>
 	    			<div class="acc-item grid-item">
-		    			<p>
-		    				Check out AirBnB listings here.
-		    			</p>
+		    			<h2> Check out AirBnB Listings for Duncan </h2>
+		    			<a class="btn" href="https://www.airbnb.ca/s/Duncan--BC" target="_blank">
+	    				Book Now
+						</a>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -215,7 +222,10 @@
 	    <div class="section" id="section6">
 	    	<div class="intro">
 	    		<h1>Gift Registry</h1>
-	    		<p>Buy us shit.</p>
+	    		<p>Your presence is the greatest gift of all but if you were to purchase something for us please browser our Amazon wish list.</p>
+				<div style="margin-top: 50px;">
+	    			<a class="btn" href="http://www.amazon.ca/registry/wishlist/2J4DXOA4F002V">Amazon Wish List</a>
+	    		</div>
 	    	</div>
 	    </div>
 	</div>

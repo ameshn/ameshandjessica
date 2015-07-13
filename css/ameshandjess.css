@@ -82,47 +82,66 @@ div.venue-grid-unit {
 	 margin: auto;
 }
 
-.grid {
+.acc-details {
     width: 80%;
     padding: 10px;
     margin:auto;
 }
 
-/* 2 columns by default */
+.grid {
+  margin: 0 auto;
+}
+
+/* 4 columns by default */
+/*
 .grid-sizer,
-.grid-item { width: 33.33%; }
+.grid-item { width: 24%; }
+
+.grid-item-3 { width: 30%; }
 
 @media screen and (min-width: 768px) {
-  /* 4 columns for larger screens */
     .grid-sizer,
     .grid-item {
       width: 24%;
     }
 }
-
+*/
 .grid-item {
-  height: 120px;
+  width: 200px;
+  height: 170px;
   float: left;
-  background: #D26;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
+  background: rgba(255,255,255, 0.5);
+  border: 2px solid #000;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
 }
 
-.acc-item-old {
-    display:inline-block;
-    margin: 10px;
+.acc-item{
+    font-family: 'Abel', sans-serif;
+}
+
+.acc-item h2{
+    margin-top: 10px;
+    height: 2.6em;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.acc-item p{
+    font-size: 1em;
     padding: 10px;
-    color: #000;
-    background:#fff;
-    background: rgba(255,255,255, 0.5);
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
+}
+
+.acc-item a{
+    display: block;
+    margin-top:15px;
 }
 
 #acc-menu li {
     display:inline-block;
-    margin: 10px;
+    margin: 25px 10px 10px 10px;
     color: #000;
     background:#fff;
     background: rgba(255,255,255, 0.5);
@@ -200,6 +219,7 @@ div.venue-grid-unit {
 
 
 .intro p{
+    font-family: 'Abel', sans-serif;
 	width: 80%;
 	margin: 0 auto;
 	font-size: 1.5em;
@@ -223,6 +243,8 @@ div.venue-grid-unit {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
   border-radius: 10px;
+  border: 1px solid #000;
+  border-color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 6px 13px #666666;
   -moz-box-shadow: 0px 6px 13px #666666;
   box-shadow: 0px 6px 13px #666666;
