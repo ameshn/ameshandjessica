@@ -82,6 +82,12 @@ div.venue-grid-unit {
 	 margin: auto;
 }
 
+div.venue-info {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
 .acc-details {
     width: 80%;
     padding: 10px;
@@ -225,6 +231,11 @@ div.venue-grid-unit {
 	font-size: 1.5em;
 }
 
+.intro h3{
+  font-family: 'Abel', sans-serif;
+  font-size: 2.0em;
+}
+
 .rsvp{
 	margin: 0 20% 0 0;
 }
@@ -350,6 +361,29 @@ div.venue-grid-unit {
   overflow-y: scroll !important;
 }
 
+/* Section 5
+ * --------------------------------------- */
+#section5 p{
+  font-size: 1.2em;
+}
+
+/* Section 6
+ * --------------------------------------- */
+  #section6 {
+  background-image: url(../imgs/gifts.jpg);
+  background-repeat: no-repeat;
+  background-size:100% auto;
+  background-position: center;
+}
+#section6 h1{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  margin: 0 0 100px 0;
+}
+#section6 p{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
 #pp-nav.custom .pp-tooltip{
