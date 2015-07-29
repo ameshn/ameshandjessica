@@ -113,8 +113,8 @@ div.venue-info {
 }
 */
 .grid-item {
-  width: 200px;
-  height: 170px;
+  width: 150px;
+  height: 120px;
   float: left;
   background: rgba(255,255,255, 0.5);
   border: 2px solid #000;
@@ -132,11 +132,11 @@ div.venue-info {
     margin-top: 10px;
     height: 2.6em;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.0em;
 }
 
 .acc-item p{
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 10px;
 }
 
@@ -363,6 +363,9 @@ div.venue-info {
 
 /* Section 5
  * --------------------------------------- */
+ #section5 h1{
+  padding-top: 50px;
+}
 #section5 p{
   font-size: 1.2em;
 }
