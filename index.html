@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Amesh and Jessica</title>
 	<meta name="author" content="Amesh Narsing" />
 	<meta name="description" content="Join us for the wedding of Amesh and Jessica." />
@@ -11,64 +11,48 @@
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=IM+Fell+English" />
 	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/ameshandjess.css" />
 
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-65845524-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
 	<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-
-	<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-65845524-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-	
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-
-			/*
-			* Plugin intialization
-			* magenta: #931640
-			* marsala: #955251
-			* green: #506C33
-			* light green: #73895C
-			* gold: #B29600
-			* off white: #FFFFE6
-			*/
-	    	$('#pagepiling').pagepiling({
-	    		menu: '#menu',
-	    		anchors: ['home', 'venue', 'rsvp', 'party', 'accomodation', 'gifts'],
-			    sectionsColor: ['white', 'white', 'white', '#5f9216', '#931640', '#926916'],
-			    navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Home', 'Venue', 'RSVP', 'Wedding Party', 'Accomodations', 'Gift Registry']
-			   	},
-			    afterRender: function(){
-			    	$('#pp-nav').addClass('custom');
-			    },
-			    afterLoad: function(anchorLink, index){
-			    	if(index>1){
-			    		$('#pp-nav').removeClass('custom');
-			    	}else{
-			    		$('#pp-nav').addClass('custom');
-			    	}
-			    }
+			$('#fullpage').fullpage({
+				sectionsColor: ['white', 'white', 'white', 'black', 'rgb(60, 19, 34)', 'white'],
+				anchors: ['home', 'venue', 'rsvp', 'party', 'accomodation', 'gifts'],
+				menu: '#menu',
+				scrollingSpeed: 1000
 			});
 
-	    	$('.grid').masonry({
+			$('.grid').masonry({
 			  	// options
 			  	itemSelector: '.grid-item',
 			  	isFitWidth: true
 			});
 
-	    	// RSVP init
+			// RSVP init
 			$('#RSVPifyIFrame').css('height', $(window).height()+'px');
 			$('.iframe-container').css('height', $(window).height()+'px');
 
@@ -103,151 +87,172 @@
 
 			    $(e.data.group).fadeIn();
 			}
-	    });
-    </script>
+
+		});
+	</script>
 
 </head>
 <body>
-	<ul id="menu">
-		<li data-menuanchor="home" class="active"><a href="#home">Amesh and Jessica</a></li>
-		<li data-menuanchor="venue"><a href="#venue">Venue</a></li>
-		<li data-menuanchor="rsvp"><a href="#rsvp">RSVP</a></li>
-		<li data-menuanchor="party"><a href="#party">Wedding Party</a></li>
-		<li data-menuanchor="accomodation"><a href="#accomodation">Accomodation</a></li>
-		<li data-menuanchor="gifts"><a href="#gifts">Gift Registry</a></li>
-	</ul>
+
+<ul id="menu">
+	<li data-menuanchor="home" class="active"><a href="#home">Amesh and Jessica</a></li>
+	<li data-menuanchor="venue"><a href="#venue">Venue</a></li>
+	<li data-menuanchor="rsvp"><a href="#rsvp">RSVP</a></li>
+	<li data-menuanchor="party"><a href="#party">Wedding Party</a></li>
+	<li data-menuanchor="accomodation"><a href="#accomodation">Accomodation</a></li>
+	<li data-menuanchor="gifts"><a href="#gifts">Gift Registry</a></li>
+</ul>
 
 
-	<div id="pagepiling">
-	    <div class="section" id="section1">
-	    	<h1>Amesh and Jessica</h1>
-			<br />
-	    </div>
-	    <div class="section" id="section2">
-	    	<div class="venue intro">
-	    		<div class="venue-grid">
-		    		<div class="venue-grid-unit">
-		    		<div class="venue-info"> 
-		    			<h2>March 26, 2016</h2>
-		    			<p>Ceremony at 3:00pm, Reception to follow</p>
-		    			<br/>
-		    			<h3>Birds Eye Cove</h3>
-		    			<p>5881 Genoa Bay Rd,</p>
-		    			<p>Duncan, B.C.</p>
-		    		</div>
-		    		</div>
-		    		<div class="grid-unit">
-		    		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.7254773076966!2d-123.597736!3d48.787130999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f4535f6c9d0db%3A0xf5f7167af9bcb454!2sBirds+Eye+Cove+Farm!5e0!3m2!1sen!2sca!4v1434857503146" width="400" height="450" frameborder="0" style="border:0"></iframe>
-		    		</div>
-		    	</div>
+<div id="fullpage">
+	<div class="section" id="section1">
+    	<h1>Amesh and Jessica</h1>
+		<br />
+    </div>
+	<div class="section" id="section2">
+    	<div class="venue intro">
+    		<div class="venue-grid">
+	    		<div class="venue-grid-unit">
+	    		<div class="venue-info"> 
+	    			<h2>March 26, 2016</h2>
+	    			<p>Ceremony at 3:00pm, Reception to follow</p>
+	    			<br/>
+	    			<h3>Birds Eye Cove</h3>
+	    			<p>5881 Genoa Bay Rd,</p>
+	    			<p>Duncan, B.C.</p>
+	    		</div>
+	    		</div>
+	    		<div class="grid-unit">
+	    		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.7254773076966!2d-123.597736!3d48.787130999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f4535f6c9d0db%3A0xf5f7167af9bcb454!2sBirds+Eye+Cove+Farm!5e0!3m2!1sen!2sca!4v1434857503146" width="400" height="450" frameborder="0" style="border:0"></iframe>
+	    		</div>
 	    	</div>
-	    </div>
-	    <div class="section" id="section3">
-	    	<div class="rsvp intro">
-	    		<p> Please RSVP by December 15, 2015 </p>
-	    		<a class="btn" href="http://ameshandjessica.rsvpify.com">Click Here to RSVP</a>
-	    		
-	    	</div>
-	    </div>
-	    <div class="section" id="section4">
-	    	<div class="intro">
+    	</div>
+    </div>
+    <div class="section" id="section3">
+    	<div class="rsvp intro">
+    		<p> Please RSVP by December 15, 2015 </p>
+    		<a class="btn" href="http://ameshandjessica.rsvpify.com">Click Here to RSVP</a>
+    		
+    	</div>
+    </div>
+    <div class="section" id="section4">
+    	<div class="slide">
+			<div class="intro">
 	    		<h1>Wedding Party</h1>
 	    		<p>More information to come soon.</p>
 	    		<div id="colors2"></div>
 	    		<div id="colors3"></div>
 	    	</div>
-	    </div>
-	    <div class="section" id="section5">
-	    	<div class="intro">
-	    		<h2>Accommodation</h2>
-	    		<p>As the wedding venue is located approximately an hour from Victoria, we highly recommend finding accommodation either in Duncan or Cowichan Bay for the night of the wedding. We will have a bus that will pick guests up at their hotel and drop them off at the venue for the ceremony and reception, as well as a bus to take you from the farm to your hotel at the end of the night. 
-	    		</p>
-	    		<br/>
-				<p>
-				We will have more information on bussing closer to the date of the wedding. If you wish to drive to the venue there is parking at the farm but you won’t be able to leave your vehicle overnight.
-				</p>
-	    	</div>
-	    	<div class="acc-types">
-	    		<ul id="acc-menu">
-					<li id="acc-button-duncan" class="active"><a href="#">Duncan</a></li>
-					<li id="acc-button-cowichan"><a href="#">Cowichan Bay</a></li>
-					<li id="acc-button-airbnb"><a href="#">AirBnB</a></li>
-				</ul>
-	    	</div>
-	    	<div class="acc-details">
-	    		<div id="acc-duncan" class="grid">
-	    			<div class="acc-item grid-item">
-	    				<h2> Thunderbird Motor Inn</h2>
-						<p>1-250-748-8192 </p>
-	    				<a class="btn" href="http://www.thunderbirdmotorinn.ca" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-					<div class="acc-item grid-item">
-						<h2>Best Western Cowichan Valley Inn</h2>
-						<p>1-250-748-2722</p>
-	    				<a class="btn" href="http://www.cowichanvalleyinn.com" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-					<div class="acc-item grid-item">
-						<h2>Super 8</h2>
-						<p>1-250-748-0661</p>
-	    				<a class="btn" href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-					<div class="acc-item grid-item">
-						<h2>Travelodge Silver Bridge</h2>
-						<p>1-888-858-2200</p>
-	    				<a class="btn" href="http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-	    		</div>
-	    		<div id="acc-cowichan" class="grid">
-	    			<div class="acc-item grid-item">
-	    				<h2>Wessex Inn</h2>
-						<p>1-250-748-4214</p>
-	    				<a class="btn" href="http://www.wessexinn.com/index.php" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-					<div class="acc-item grid-item">
-						<h2>The Secret Garden B&B (closest to the veue)</h2>
-						<p>1-250-412-1603</p>
-	    				<a class="btn" href="http://www.bbcanada.com/visecretgarden" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-					<div class="acc-item grid-item grid-item-3">
-						<h2>The Funky Frog B&B</h2>
-						<p>1-250-597-4662</p>
-	    				<a class="btn" href="http://www.funkyfrogbb.com/" target="_blank">
-	    				Book Now
-						</a>
-					</div>
-	    		</div>
-	    		<div id="acc-airbnb" class="grid">
-	    			<div class="acc-item grid-item">
-		    			<h2> Check out AirBnB Listings for Duncan </h2>
-		    			<a class="btn" href="https://www.airbnb.ca/s/Duncan--BC" target="_blank">
-	    				Book Now
-						</a>
-	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="section" id="section6">
-	    	<div class="intro">
-	    		<h1>Gift Registry</h1>
-	    		<p>Your presence is the greatest gift of all but if you were to purchase something for us please browse our Amazon wish list.</p>
-				<div style="margin-top: 50px;">
-	    			<a class="btn" href="http://www.amazon.ca/registry/wishlist/2J4DXOA4F002V" target="_blank">Amazon Wish List</a>
-	    		</div>
-	    	</div>
-	    </div>
-	</div>
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<p>Soon it will be time to...</p>
+			</div>
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<h1>Party Hard!</h1>
+			</div>
+		</div>
+    </div>
+    <div class="section" id="section5">
+    	<div class="intro">
+    		<h2>Accommodation</h2>
+    		<p>As the wedding venue is located approximately an hour from Victoria, we highly recommend finding accommodation either in Duncan or Cowichan Bay for the night of the wedding. We will have a bus that will pick guests up at their hotel and drop them off at the venue for the ceremony and reception, as well as a bus to take you from the farm to your hotel at the end of the night. 
+    		</p>
+    		<br/>
+			<p>
+			We will have more information on bussing closer to the date of the wedding. If you wish to drive to the venue there is parking at the farm but you won’t be able to leave your vehicle overnight.
+			</p>
+    	</div>
+    	<div class="acc-types">
+    		<ul id="acc-menu">
+				<li id="acc-button-duncan" class="active"><a href="#">Duncan</a></li>
+				<li id="acc-button-cowichan"><a href="#">Cowichan Bay</a></li>
+				<li id="acc-button-airbnb"><a href="#">AirBnB</a></li>
+			</ul>
+    	</div>
+    	<div class="acc-details">
+    		<div id="acc-duncan" class="grid">
+    			<div class="acc-item grid-item">
+    				<h2> Thunderbird Motor Inn</h2>
+					<p>1-250-748-8192 </p>
+    				<a class="btn" href="http://www.thunderbirdmotorinn.ca" target="_blank">
+    				Book Now
+					</a>
+				</div>
+				<div class="acc-item grid-item">
+					<h2>Best Western Cowichan Valley Inn</h2>
+					<p>1-250-748-2722</p>
+    				<a class="btn" href="http://www.cowichanvalleyinn.com" target="_blank">
+    				Book Now
+					</a>
+				</div>
+				<div class="acc-item grid-item">
+					<h2>Super 8</h2>
+					<p>1-250-748-0661</p>
+    				<a class="btn" href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview" target="_blank">
+    				Book Now
+					</a>
+				</div>
+				<div class="acc-item grid-item">
+					<h2>Travelodge Silver Bridge</h2>
+					<p>1-888-858-2200</p>
+    				<a class="btn" href="http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview" target="_blank">
+    				Book Now
+					</a>
+				</div>
+    		</div>
+    		<div id="acc-cowichan" class="grid">
+    			<div class="acc-item grid-item">
+    				<h2>Quamichan Inn</h2>
+					<p>1-250-746-7028</p>
+    				<a class="btn" href="http://www.quamichaninn.com/" target="_blank">
+    				Book Now
+					</a>
+				</div>
+    			<div class="acc-item grid-item">
+    				<h2>Wessex Inn</h2>
+					<p>1-250-748-4214</p>
+    				<a class="btn" href="http://www.wessexinn.com/index.php" target="_blank">
+    				Book Now
+					</a>
+				</div>
+				<div class="acc-item grid-item">
+					<h2>The Secret Garden B&B (closest to the veue)</h2>
+					<p>1-250-412-1603</p>
+    				<a class="btn" href="http://www.bbcanada.com/visecretgarden" target="_blank">
+    				Book Now
+					</a>
+				</div>
+				<div class="acc-item grid-item grid-item-3">
+					<h2>The Funky Frog B&B</h2>
+					<p>1-250-597-4662</p>
+    				<a class="btn" href="http://www.funkyfrogbb.com/" target="_blank">
+    				Book Now
+					</a>
+				</div>
+    		</div>
+    		<div id="acc-airbnb" class="grid">
+    			<div class="acc-item grid-item">
+	    			<h2> Check out AirBnB Listings for Duncan </h2>
+	    			<a class="btn" href="https://www.airbnb.ca/s/Duncan--BC" target="_blank">
+    				Book Now
+					</a>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="section" id="section6">
+    	<div class="intro">
+    		<h1>Gift Registry</h1>
+    		<p>Your presence is the greatest gift of all but if you were to purchase something for us please browse our Amazon wish list.</p>
+			<div style="margin-top: 50px;">
+    			<a class="btn" href="http://www.amazon.ca/registry/wishlist/2J4DXOA4F002V" target="_blank">Amazon Wish List</a>
+    		</div>
+    	</div>
+    </div>
+</div>
 
 </body>
 </html>
