@@ -48,6 +48,10 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
 /* Custom CSS
  * --------------------------------------- */
 body{
@@ -227,9 +231,9 @@ div.venue-info {
 	margin:0;
 }
 
-
+/* TODO change this font situation */
 .intro p{
-    font-family: 'Abel', sans-serif;
+  font-family: 'Abel', sans-serif;
 	width: 80%;
 	margin: 0 auto;
 	font-size: 1.5em;
@@ -257,7 +261,7 @@ div.venue-info {
   border-color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 3px 13px #000;
   -moz-box-shadow: 0px 3px 13px #000;
-  box-shadow: 0px 3px 13px #000;
+  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.4);
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
@@ -267,6 +271,108 @@ div.venue-info {
 .btn:hover {
   background: rgb(220, 124, 17);
   text-decoration: none;
+}
+
+/* Party
+ * --------------------------------------- */
+.party {
+  width: 80%;
+  margin: auto;
+}
+
+.party h1 {
+  font-size: 3em;
+  color: rgba(179, 104, 20, 0.87);
+}
+
+.party-group {
+  padding: 20px 0px;
+}
+
+.party-item {
+  width: 20%;
+  height: 20%;
+  float:left;
+  margin: auto;
+}
+
+.party-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-large {
+  width: 400px;
+  height: 400px;
+}
+
+.party-feat {
+  width: 50%;
+  float:left;
+}
+
+.party-desc {
+  width: 50%;
+  float: left;
+}
+
+.party-desc h1 {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.party-desc p {
+  font-size: 1em;
+  text-align: left;
+}
+
+.party-name {
+  font-family: 'Abel', sans-serif;
+  padding: 5px 0;
+  width: 150px;
+  margin: 10px auto;
+  background: rgba(179, 104, 20, 0.87);
+  border-radius: 15px;
+
+}
+
+.pravin {
+  background-image: url(../imgs/portraits/pravin.jpg);
+  background-position: center 10%;
+}
+.danny {
+  background-image: url(../imgs/portraits/danny.jpg);
+}
+.nate {
+  background-image: url(../imgs/portraits/nate.jpg);
+}
+.michael {
+  background-image: url(../imgs/portraits/michael.jpg);
+}
+.dave {
+  background-image: url(../imgs/portraits/dave.jpg);
+}
+
+.sarena {
+  background-image: url(../imgs/portraits/sarena.jpg);
+  background-position: center 10%;
+}
+.sanober {
+  background-image: url(../imgs/portraits/sanober.jpg);
+}
+.laurel {
+  background-image: url(../imgs/portraits/laurel.jpg);
+}
+.cindy {
+  background-image: url(../imgs/portraits/cindy.jpg);
+}
+.haley {
+  background-image: url(../imgs/portraits/haley.jpg);
 }
 
 /* Section 1
