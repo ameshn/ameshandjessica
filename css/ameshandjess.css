@@ -467,12 +467,19 @@ div.venue-info {
   background-position: center;
 }
 
-#section4 h1{
+#section4 h1,
+#section4 h2{
   color: white;
 }
 
+#section4 h2{
+  text-align: left;
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
 #section4 p{
-	opacity: 0.6;
+  font-family: 'Abel', sans-serif;
 }
 
 .iframe-container {
