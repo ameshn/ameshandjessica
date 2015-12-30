@@ -370,6 +370,7 @@ div.venue-info {
 }
 .cindy {
   background-image: url(../imgs/portraits/cindy.jpg);
+  background-position: center 15%;
 }
 .haley {
   background-image: url(../imgs/portraits/haley.jpg);
@@ -460,11 +461,16 @@ div.venue-info {
 /* Section 4
  * --------------------------------------- */
  #section4 {
-  background-image: url(../imgs/table.jpg);
+  background-image: url(../imgs/party.jpg);
   background-repeat: no-repeat;
   background-size:100% auto;
   background-position: center;
 }
+
+#section4 h1{
+  color: white;
+}
+
 #section4 p{
 	opacity: 0.6;
 }
